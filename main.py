@@ -35,9 +35,9 @@ if not os.path.isfile(DB_NAME):
     with db_connection:
         db_connection.execute("""CREATE TABLE IF NOT EXISTS annual_production (
                                 api_well_number TEXT PRIMARY KEY,
-                                oil REAL,
-                                gas REAL,
-                                brine REAL
+                                oil INTEGER,
+                                gas INTEGER,
+                                brine INTEGER
                             )""")
         db_connection.executemany(
             """
